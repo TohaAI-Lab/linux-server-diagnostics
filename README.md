@@ -1,8 +1,12 @@
-<p align="center">
-  <img src="banner.png" alt="Linux Server Diagnostics Banner" width="100%">
-</p>
+![Linux Server Diagnostics Banner](./banner.png)
 
-<br># Linux Server Diagnostics
+*Illustrative banner. The actual toolkit is a command-line utility with JSON output.*
+
+# Linux Server Diagnostics
+
+[View sample diagnostic report](./examples/sample-report.json)
+
+
 
 ### Lightweight, read-only Linux server diagnostics toolkit
 
