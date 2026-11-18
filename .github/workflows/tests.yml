@@ -1,0 +1,43 @@
+name: Automated Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12", "3.13", "3.14"]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Check Python syntax
+        run: python -m py_compile diagnostics.py
+
+      - name: Run unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Validate diagnostic JSON
+        run: |
+          python diagnostics.py --top 0 --compact > report.json
+          python -m json.tool report.json > /dev/null
