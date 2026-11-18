@@ -1,0 +1,76 @@
+{
+  "version": "0.1.0",
+  "timestamp_utc": "redacted",
+  "system": {
+    "os": "Linux",
+    "kernel": "redacted",
+    "architecture": "x86_64"
+  },
+  "cpu": {
+    "logical_cpus": 5,
+    "usage_percent": 0,
+    "load_average": [
+      0.0732421875,
+      0.01611328125,
+      0.0048828125
+    ],
+    "sample_seconds": 0.25
+  },
+  "memory": {
+    "ram_total_bytes": 6236844032,
+    "ram_available_bytes": 4901134336,
+    "ram_used_percent": 21.4,
+    "swap_total_bytes": 0,
+    "swap_used_bytes": 0
+  },
+  "disk": {
+    "path": "/",
+    "total_bytes": 33770192896,
+    "used_bytes": 41807872,
+    "available_bytes": 31993622528,
+    "used_percent": 0.1
+  },
+  "top_processes_by_rss": [
+    {
+      "pid": 1,
+      "name": "redacted-process-1",
+      "rss_bytes": 263360512
+    },
+    {
+      "pid": 2,
+      "name": "redacted-process-2",
+      "rss_bytes": 146956288
+    },
+    {
+      "pid": 3,
+      "name": "redacted-process-3",
+      "rss_bytes": 98545664
+    },
+    {
+      "pid": 4,
+      "name": "redacted-process-4",
+      "rss_bytes": 97746944
+    },
+    {
+      "pid": 5,
+      "name": "redacted-process-5",
+      "rss_bytes": 76582912
+    }
+  ],
+  "network_counters": [
+    {
+      "interface": "redacted-interface-1",
+      "rx_bytes": 375556,
+      "tx_bytes": 375556
+    },
+    {
+      "interface": "redacted-interface-2",
+      "rx_bytes": 2976,
+      "tx_bytes": 1920
+    }
+  ],
+  "systemd": {
+    "available": false,
+    "reason": "systemd is not available in this environment"
+  }
+}
