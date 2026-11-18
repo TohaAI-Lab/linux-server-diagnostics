@@ -1,4 +1,8 @@
-# Linux Server Diagnostics
+<p align="center">
+  <img src="banner.png" alt="Linux Server Diagnostics Banner" width="100%">
+</p>
+
+<br># Linux Server Diagnostics
 
 ### Lightweight, read-only Linux server diagnostics toolkit
 
